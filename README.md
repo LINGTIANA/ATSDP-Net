@@ -6,4 +6,4 @@ https://drive.google.com/file/d/1EDkD9P8DR42dZXpuxelbnIc0-2MVzRMm/view?usp=shari
 
 After opening the link, download the 'other' folder. After decompression, there will be 'data' and 'save'. Extract these two folders and place them in the ATSDP Net folder, which is the same level directory as DaNN.
 
-The executed command is in Parameters.txt
+The executed command is in Parameter.txt
