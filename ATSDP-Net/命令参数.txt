@@ -1,0 +1,66 @@
+120  data1
+python bulkmodel.py --drug "CISPLATIN" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "128,64" --bottleneck 512 --data_name "GSE117872HN120" --sampling "SMOTE" --dropout 0.3 --lr 0.01 --printgene "F" -mod "new" --checkpoint "save/bulk_pre/integrate_data_GSE117872HN120_drug_CISPLATIN_bottle_512_edim_256,128_pdim_128,64_model_DAE_dropout_0.3_gene_F_lr_0.01_mod_new_sam_SMOTE"
+
+python scmodel.py --sc_data "GSE117872HN120" --dimreduce "DAE" --drug "CISPLATIN" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "128,64" --dropout 0.3 --printgene "T" -mod "new" --lr 0.01 --sampling "SMOTE" --printgene "T" -mod "new" --checkpoint "save/sc_pre/integrate_data_GSE117872HN120_drug_CISPLATIN_bottle_512_edim_256,128_pdim_128,64_model_DAE_dropout_0.3_gene_F_lr_0.01_mod_new_sam_SMOTE_DaNN.pkl"
+
+137  data2
+python bulkmodel.py --drug "CISPLATIN" --dimreduce "DAE" --encoder_h_dims "512,256" --predictor_h_dims "256,128" --bottleneck 32 --data_name "GSE117872HN137" --sampling "upsampling" --dropout 0.3 --lr 0.01 --printgene "T" -mod "new" --checkpoint "save/bulk_pre/integrate_data_GSE117872HN137_drug_CISPLATIN_bottle_32_edim_512,256_pdim_256,128_model_DAE_dropout_0.3_gene_F_lr_0.01_mod_new_sam_upsampling"
+
+python scmodel.py --sc_data "GSE117872HN137" --dimreduce "DAE" --drug "CISPLATIN" --bulk_h_dims "512,256" --bottleneck 32 --predictor_h_dims "256,128" --dropout 0.3 --printgene "T" -mod "new" --lr 0.01 --sampling "upsampling" --printgene "T" -mod "new" --checkpoint "save/sc_pre/integrate_data_GSE117872HN137_drug_CISPLATIN_bottle_32_edim_512,256_pdim_256,128_model_DAE_dropout_0.3_gene_F_lr_0.01_mod_new_sam_upsampling_DaNN.pkl"
+
+
+GSE140440-3   data4 前列腺癌    多西紫杉醇    DOCETAXEL
+python bulkmodel.py --drug "DOCETAXEL" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "256,128" --bottleneck 512 --data_name "GSE140440" --sampling "upsampling" --dropout 0.2 --lr 0.01 --printgene "T" -mod "new" --checkpoint "save/bulk_pre/integrate_data_GSE140440_drug_DOCETAXEL_bottle_512_edim_256,128_pdim_256,128_model_DAE_dropout_0.2_gene_F_lr_0.01_mod_new_sam_upsampling"
+
+python scmodel.py --sc_data "GSE140440" --dimreduce "DAE" --drug "DOCETAXEL" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "256,128" --dropout 0.2 --printgene "T" -mod "new" --lr 0.01 --sampling "upsampling" --printgene "T" -mod "new" --checkpoint "save/sc_pre/integrate_data_GSE140440_drug_DOCETAXEL_bottle_512_edim_256,128_pdim_256,128_model_DAE_dropout_0.2_gene_F_lr_0.01_mod_new_sam_upsampling_DaNN.pkl"
+
+
+GSE110894-4  data6 小家鼠    急性粒细胞白血病    I-BET-762   new
+python bulkmodel.py --drug "I.BET.762" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "128,64" --bottleneck 512 --data_name "GSE110894" --sampling "upsampling" --dropout 0.3 --lr 0.5 --printgene "T" -mod "new" --checkpoint "save/bulk_pre/integrate_data_GSE110894_drug_I.BET.762_bottle_512_edim_256,128_pdim_128,64_model_DAE_dropout_0.3_gene_F_lr_0.5_mod_new_sam_upsampling"
+
+python scmodel.py --sc_data "GSE110894" --dimreduce "DAE" --drug "I.BET.762" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "128,64" --dropout 0.3 --printgene "T" -mod "new" --lr 0.5 --sampling "upsampling" --printgene "T" -mod "new" --checkpoint "save/sc_pre/integrate_data_GSE110894_drug_I.BET.762_bottle_512_edim_256,128_pdim_128,64_model_DAE_dropout_0.3_gene_F_lr_0.5_mod_new_sam_upsampling_DaNN.pkl"
+
+
+120  data1
+python bulkmodel.py --drug "CISPLATIN" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "128,64" --bottleneck 512 --data_name "GSE117872HN120" --sampling "SMOTE" --dropout 0.3 --lr 0.01 --printgene "F" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE117872HN120" --dimreduce "DAE" --drug "CISPLATIN" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "128,64" --dropout 0.3 --printgene "F" -mod "new" --lr 0.01 --sampling "SMOTE" --printgene "F" -mod "new" --checkpoint "False"
+
+137  data2
+python bulkmodel.py --drug "CISPLATIN" --dimreduce "DAE" --encoder_h_dims "512,256" --predictor_h_dims "256,128" --bottleneck 32 --data_name "GSE117872HN137" --sampling "upsampling" --dropout 0.3 --lr 0.01 --printgene "F" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE117872HN137" --dimreduce "DAE" --drug "CISPLATIN" --bulk_h_dims "512,256" --bottleneck 32 --predictor_h_dims "256,128" --dropout 0.3 --printgene "F" -mod "new" --lr 0.01 --sampling "upsampling" --printgene "F" -mod "new" --checkpoint "False"
+
+GSE112274  data3 肺癌    吉非替尼   GEFITINIB
+python bulkmodel.py --drug "GEFITINIB" --dimreduce "DAE" --encoder_h_dims "512,256" --predictor_h_dims "256,128" --bottleneck 256 --data_name "GSE112274" --sampling "no" --dropout 0.1 --lr 0.5 --printgene "F" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE112274" --dimreduce "DAE" --drug "GEFITINIB" --bulk_h_dims "512,256" --bottleneck 256 --predictor_h_dims "256,128" --dropout 0.1 --printgene "F" -mod "new" --lr 0.5 --sampling "no" --printgene "F" -mod "new" --checkpoint "False"
+
+
+GSE140440-3  data4 前列腺癌    多西紫杉醇    DOCETAXEL
+python bulkmodel.py --drug "DOCETAXEL" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "256,128" --bottleneck 512 --data_name "GSE140440" --sampling "upsampling" --dropout 0.2 --lr 0.01 --printgene "F" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE140440" --dimreduce "DAE" --drug "DOCETAXEL" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "256,128" --dropout 0.2 --printgene "F" -mod "new" --lr 0.01 --sampling "upsampling" --printgene "F" -mod "new" --checkpoint "False"
+
+GSE149383  data5  肺癌       厄洛替尼    ERLOTINIB
+python bulkmodel.py --drug "ERLOTINIB" --dimreduce "DAE" --encoder_h_dims "512,256" --predictor_h_dims "256,128" --bottleneck 64 --data_name "GSE149383" --sampling "upsampling" --dropout 0.3 --lr 0.01 --printgene "F" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE149383" --dimreduce "DAE" --drug "ERLOTINIB" --bulk_h_dims "512,256" --bottleneck 64 --predictor_h_dims "256,128" --dropout 0.3 --printgene "F" -mod "new" --lr 0.01 --sampling "upsampling" --printgene "F" -mod "new" --checkpoint "False"
+
+
+GSE110894-4  data6 小家鼠    急性粒细胞白血病    I-BET-762
+python bulkmodel.py --drug "I.BET.762" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "128,64" --bottleneck 512 --data_name "GSE110894" --sampling "upsampling" --dropout 0.1 --lr 0.5 --printgene "F" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE110894" --dimreduce "DAE" --drug "I.BET.762" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "128,64" --dropout 0.1 --printgene "F" -mod "new" --lr 0.5 --sampling "upsampling" --printgene "F" -mod "new" --checkpoint "False"
+
+
+GSE140440-3   data4 前列腺癌    多西紫杉醇    DOCETAXEL
+python bulkmodel.py --drug "DOCETAXEL" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "256,128" --bottleneck 512 --data_name "GSE140440" --sampling "upsampling" --dropout 0.2 --lr 0.01 --printgene "F" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE140440" --dimreduce "DAE" --drug "DOCETAXEL" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "256,128" --dropout 0.2 --printgene "F" -mod "new" --lr 0.01 --sampling "upsampling" --printgene "F" -mod "new" --checkpoint "False"
+
+
+GSE110894-4  data6 小家鼠    急性粒细胞白血病    I-BET-762   new
+python bulkmodel.py --drug "I.BET.762" --dimreduce "DAE" --encoder_h_dims "256,128" --predictor_h_dims "128,64" --bottleneck 512 --data_name "GSE110894" --sampling "upsampling" --dropout 0.3 --lr 0.5 --printgene "T" -mod "new" --checkpoint "False"
+
+python scmodel.py --sc_data "GSE110894" --dimreduce "DAE" --drug "I.BET.762" --bulk_h_dims "256,128" --bottleneck 512 --predictor_h_dims "128,64" --dropout 0.3 --printgene "T" -mod "new" --lr 0.5 --sampling "upsampling" --printgene "T" -mod "new" --checkpoint "False"
